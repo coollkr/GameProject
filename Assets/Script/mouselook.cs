@@ -9,8 +9,14 @@ public class mouselook : MonoBehaviour
 {
     public Transform player;
     private float mouseX, mouseY;
-    public float mouseSensitivity;
+    public float mouseSensitivity = 200f;
     public float xRotation;
+
+    public void Start()
+    {
+        player = GameObject.Find("player").transform;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     private void Update()
     {
