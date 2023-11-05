@@ -269,7 +269,7 @@ MonoBehaviour:
   RunSpeed: 10
   WalkSpeed: 2
   RotateSpeed: 0
-  controller: {fileID: 0}
+  controller: {fileID: 919353906}
   moveDirection: {x: 0, y: 0, z: 0}
   isGrounded: 0
   groundCheckDistance: 0.4
@@ -384,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3c43a6015629e43a3fd6fd984336df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1909431542}
-  mouseSensitivity: 300
+  player: {fileID: 0}
+  mouseSensitivity: 200
   xRotation: 0
 --- !u!114 &963194230
 MonoBehaviour:
