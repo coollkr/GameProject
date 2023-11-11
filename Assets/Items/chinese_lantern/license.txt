@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chinese Lantern
+* source:	https://sketchfab.com/3d-models/chinese-lantern-927615b30e8f4a2993353ed0dd588c68
+* author:	ItsKevin (https://sketchfab.com/ItsKevin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chinese Lantern" (https://sketchfab.com/3d-models/chinese-lantern-927615b30e8f4a2993353ed0dd588c68) by ItsKevin (https://sketchfab.com/ItsKevin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
