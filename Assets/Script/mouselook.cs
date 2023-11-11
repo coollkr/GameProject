@@ -14,7 +14,12 @@ public class mouselook : MonoBehaviour
 
     public void Start()
     {
-        player = GameObject.Find("player").transform;
+        
+            player = GameObject.Find("maincharacter").transform;
+            if (player == null)
+            {
+                Debug.LogError("no player component found.");  
+            }
         
         
     }
