@@ -29,8 +29,8 @@ public class mainplayer : MonoBehaviour
         controller = GetComponent<CharacterController>();
         
         groundMask = LayerMask.GetMask("ground");
+        Cursor.lockState = CursorLockMode.Locked;
         
-        _animation = GetComponent<Animation>();
         
         
     }
@@ -63,15 +63,7 @@ public class mainplayer : MonoBehaviour
 
         moveDirection = new Vector3(moveX, 0, moveZ);
         moveDirection = transform.TransformDirection(moveDirection);
-        moveDirection.Normalize();
         
-        // if (moveDirection != Vector3.zero)
-        // {
-        //     transform.forward = moveDirection;
-        // }
-
-        
-
         
         
         

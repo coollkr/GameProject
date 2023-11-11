@@ -15,11 +15,13 @@ public class mouselook : MonoBehaviour
     public void Start()
     {
         player = GameObject.Find("player").transform;
-        Cursor.lockState = CursorLockMode.Locked;
+        
+        
     }
 
     private void Update()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
