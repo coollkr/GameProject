@@ -14,12 +14,19 @@ public class mouselook : MonoBehaviour
 
     public void Start()
     {
-        player = GameObject.Find("player").transform;
-        Cursor.lockState = CursorLockMode.Locked;
+        
+            player = GameObject.Find("maincharacter").transform;
+            if (player == null)
+            {
+                Debug.LogError("no player component found.");  
+            }
+        
+        
     }
 
     private void Update()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

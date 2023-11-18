@@ -1,0 +1,11 @@
+Model Information:
+* title:	Village head
+* source:	https://sketchfab.com/3d-models/village-head-600e821c90e74cc8ae1bb078609327f0
+* author:	Hipuff (https://sketchfab.com/Paofu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Village head" (https://sketchfab.com/3d-models/village-head-600e821c90e74cc8ae1bb078609327f0) by Hipuff (https://sketchfab.com/Paofu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

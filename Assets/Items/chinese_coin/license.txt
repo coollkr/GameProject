@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chinese coin
+* source:	https://sketchfab.com/3d-models/chinese-coin-384f557db51a407e807c59af188cc9cc
+* author:	BenP5 (https://sketchfab.com/BenP5)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chinese coin" (https://sketchfab.com/3d-models/chinese-coin-384f557db51a407e807c59af188cc9cc) by BenP5 (https://sketchfab.com/BenP5) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

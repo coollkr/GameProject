@@ -1,0 +1,362 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        0.6269374489784241,
+        1.0000001192092896,
+        0.2675078213214874
+      ],
+      "min": [
+        -0.6269374489784241,
+        -1.0,
+        -0.2675078511238098
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 54048,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        0.9995889067649841,
+        0.9981726408004761,
+        0.9999468922615051
+      ],
+      "min": [
+        -0.9995889067649841,
+        -1.0,
+        -0.9999858140945435
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        1.0,
+        0.9999628663063049,
+        0.9999923706054688,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.9991419315338135,
+        -0.9999757409095764,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        1.993228793144226,
+        0.9935864210128784
+      ],
+      "min": [
+        0.01197587139904499,
+        0.008088946342468262
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 36032,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        1.993228793144226,
+        0.9935864210128784
+      ],
+      "min": [
+        0.01197587139904499,
+        0.008088946342468262
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 72064,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        1.993228793144226,
+        0.9935864210128784
+      ],
+      "min": [
+        0.01197587139904499,
+        0.008088946342468262
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 108096,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        1.993228793144226,
+        0.9935864210128784
+      ],
+      "min": [
+        0.01197587139904499,
+        0.008088946342468262
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 144128,
+      "componentType": 5126,
+      "count": 4504,
+      "max": [
+        1.993228793144226,
+        0.9935864210128784
+      ],
+      "min": [
+        0.01197587139904499,
+        0.008088946342468262
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 22746,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Hipuff (https://sketchfab.com/Paofu)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/village-head-600e821c90e74cc8ae1bb078609327f0",
+      "title": "Village head"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 90984,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 180160,
+      "byteOffset": 90984,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 108096,
+      "byteOffset": 271144,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 72064,
+      "byteOffset": 379240,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 451304,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/03_-_Default_baseColor.png"
+    },
+    {
+      "uri": "textures/03_-_Default_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/03_-_Default_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "name": "03_-_Default",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5,
+            "TEXCOORD_3": 6,
+            "TEXCOORD_4": 7
+          },
+          "indices": 8,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        33.33493423461914,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        33.33493423461914,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        33.33493423461914,
+        0.0,
+        0.0,
+        33.355621337890625,
+        0.39671993255615234,
+        1.0
+      ],
+      "name": "root_0"
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "Object001_1"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "Object001_2"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_6"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
