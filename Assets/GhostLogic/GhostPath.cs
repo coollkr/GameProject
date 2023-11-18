@@ -18,7 +18,7 @@ public class GhostPath : MonoBehaviour
             waypoints[i] = transform.GetChild(i);
         }
 
-        Debug.Log(waypoints.Length);
+    //    Debug.Log(waypoints.Length);
 
     }
 

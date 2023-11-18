@@ -77,7 +77,7 @@ public class GhostAI : MonoBehaviour
             else
             {
                 float disFromWaypoint = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
-                Debug.Log("This is right. BUt the distance is " + disFromWaypoint);
+             //   Debug.Log("This is right. BUt the distance is " + disFromWaypoint);
                 if ( !nav.pathPending && disFromWaypoint < 3.0f)
                 {
                     NextWaypoint();
@@ -90,7 +90,7 @@ public class GhostAI : MonoBehaviour
     {
         currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
         nav.SetDestination(waypoints[currentWaypoint].position);
-        Debug.Log(currentWaypoint);
+      //  Debug.Log(currentWaypoint);
     }
 
     void FindNearestWaypoint()
