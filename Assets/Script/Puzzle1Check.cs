@@ -11,10 +11,6 @@ public class PuzzleCompletionChecker : MonoBehaviour
 
     private void CheckPuzzleCompletion()
     {
-        Debug.Log(lion1.transform.eulerAngles.y);
-        Debug.Log(lion2.transform.eulerAngles.y);
-        Debug.Log(lion3.transform.eulerAngles.y);
-        Debug.Log(lion4.transform.eulerAngles.y);
         if (Mathf.Approximately(lion1.transform.eulerAngles.y, 270f) &&
             Mathf.Approximately(lion2.transform.eulerAngles.y, 0f) &&
             Mathf.Approximately(lion3.transform.eulerAngles.y, 180f) &&
