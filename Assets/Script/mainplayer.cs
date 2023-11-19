@@ -25,7 +25,7 @@ public class mainplayer : MonoBehaviour
     private Animation _animation;
     void Start()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
         controller = GetComponent<CharacterController>();
         
         groundMask = LayerMask.GetMask("ground");
