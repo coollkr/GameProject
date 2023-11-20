@@ -45,12 +45,20 @@ public class GhostAI : MonoBehaviour
         {
             Debug.LogError("Path variable is not assigned.");
         }
+        // Dynamically find and set references to protagonists added by Zheyu
+        FindPlayer();
     }
-
+/*
     // Update is called once per frame
     void Update()
     {
         float disFromPlayer = Vector3.Distance(transform.position, player.position);
+        // If the main character is not found, try to find it again
+        if (player == null)
+        {
+            FindPlayer();
+            return; // If the protagonist is still not found, the subsequent logic is not executed
+        }
 
         if (chasing == true)
         {
@@ -85,7 +93,66 @@ public class GhostAI : MonoBehaviour
             }
         }
     }
+*/
 
+    void Update()
+    {
+        // If you can't find the main character, try to find it again
+        if (player == null)
+        {
+            FindPlayer();
+        }
+
+        // If the protagonist is still not found, continue with the patrol logic
+        if (player == null)
+        {
+            Patrol();
+            return;
+        }
+
+        // Calculate the distance to the protagonist
+        float disFromPlayer = Vector3.Distance(transform.position, player.position);
+
+        if (chasing)
+        {
+            if (disFromPlayer > chaseDis || safesapce.bounds.Contains(player.position))
+            {
+                chasing = false;
+                FindNearestWaypoint();
+                nav.speed = patrolSpeed;
+            }
+            else
+            {
+                nav.SetDestination(player.position);
+                nav.speed = chasingSpeed;
+            }
+        }
+        else
+        {
+            if (disFromPlayer < chaseDis && !safesapce.bounds.Contains(player.position))
+            {
+                chasing = true;
+                nav.speed = chasingSpeed;
+            }
+            else
+            {
+                Patrol();
+            }
+        }
+    }
+
+    void Patrol()
+    {
+        float disFromWaypoint = Vector3.Distance(transform.position, waypoints[currentWaypoint].position);
+        if (!nav.pathPending && disFromWaypoint < 3.0f)
+        {
+            NextWaypoint();
+        }
+        if (!chasing && nav.destination != waypoints[currentWaypoint].position)
+        {
+            nav.SetDestination(waypoints[currentWaypoint].position);
+        }
+    }
     void NextWaypoint()
     {
         currentWaypoint = (currentWaypoint + 1) % waypoints.Length;
@@ -107,5 +174,14 @@ public class GhostAI : MonoBehaviour
         }
 
         currentWaypoint = shortestIndex; 
+    }
+
+        private void FindPlayer()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            player = playerObject.transform;
+        }
     }
 }
