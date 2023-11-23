@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.49245283, g: 0.52302885, b: 0.5471698, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.04
@@ -240,10 +240,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5631243272487370609, guid: 5606b0ec50f25c04b80d6d701a1dd549, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5894164022024446749, guid: 5606b0ec50f25c04b80d6d701a1dd549, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1343968242}
   m_SourcePrefab: {fileID: 100100000, guid: 5606b0ec50f25c04b80d6d701a1dd549, type: 3}
 --- !u!4 &12477883 stripped
 Transform:
@@ -4635,6 +4639,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 708779487}
   m_LocalEulerAnglesHint: {x: 0, y: -54.937, z: 0}
+--- !u!1 &1343968241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5894164022024446749, guid: 5606b0ec50f25c04b80d6d701a1dd549, type: 3}
+  m_PrefabInstance: {fileID: 4892102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1343968242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343968241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0581e3411f2f8942a03fe81d299bc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScene: Scene1
+  loadingScreen: {fileID: 0}
 --- !u!1001 &1374744936
 PrefabInstance:
   m_ObjectHideFlags: 0

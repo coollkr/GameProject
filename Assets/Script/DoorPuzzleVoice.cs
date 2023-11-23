@@ -12,8 +12,8 @@ public class DoorPuzzleVoice : MonoBehaviour
     public List<GameObject> lights; // List of lights to be controlled
 
     public GameObject characterModel; // Reference to the character model
-    private Vector3 startPostion = new Vector3(-32, 1.4f, -183); // Start position of the character
-    private Vector3 endPosition = new Vector3(-32, 1.4f, -272); // End position of the character
+    private Vector3 startPostion = new Vector3(515, 1.4f, 89); // Start position of the character
+    private Vector3 endPosition = new Vector3(515, 1.4f, -2); // End position of the character
 
     void Start()
     {
@@ -63,31 +63,31 @@ public class DoorPuzzleVoice : MonoBehaviour
 
 IEnumerator ShowUIAfterSound(float delay)
 {
-    if (knockSequenceIndex == 4) // 第四次敲门声
+    if (knockSequenceIndex == 4) // Fourth knock.
     {
-        yield return new WaitForSeconds(3); // 等待 3 秒
+        yield return new WaitForSeconds(2); // wait 2 seconds
 
-        // 控制灯光闪烁 4 秒
+        // Controls light blinking for 4 seconds
         float endTime = Time.time + 4;
         while (Time.time < endTime)
         {
             foreach (var light in lights)
             {
-                light.SetActive(Random.Range(0, 2) > 0); // 随机灯光开关状态
+                light.SetActive(Random.Range(0, 2) > 0); // Randomized light switch status
             }
             yield return new WaitForSeconds(0.1f);
         }
 
-        // 立即关闭所有灯光
+        // turn off light
         ToggleLights(false);
 
-        yield return new WaitForSeconds(1); // 灯光关闭后等待 1 秒
+        yield return new WaitForSeconds(1); // wait 1 second
 
-        // 激活并移动人物模型 5 秒
-        characterModel.SetActive(true); // 激活人物模型
-        characterModel.transform.position = startPostion; // 设置起始位置
+        // Activate and move the character model for 5 seconds
+        characterModel.SetActive(true); // active modle
+        characterModel.transform.position = startPostion; // set start point
 
-        float moveDuration = 5.0f; // 移动总时长
+        float moveDuration = 5.0f; 
         float startTime = Time.time;
 
         while (Time.time < startTime + moveDuration)
@@ -97,23 +97,23 @@ IEnumerator ShowUIAfterSound(float delay)
             yield return null;
         }
 
-        characterModel.SetActive(false); // 移动结束后禁用人物模型
+        characterModel.SetActive(false); // Not active model
 
-        // 禁用人物模型的瞬间打开所有灯光
+        // Turn on all lights the moment you disable the character model
         ToggleLights(true);
     }
     else
     {
-        yield return new WaitForSeconds(delay); // 其他情况正常等待
+        yield return new WaitForSeconds(delay); // Otherwise waiting
     }
 
     if (knockSequenceIndex < knockingSounds.Length)
     {
-        uiTextObject.SetActive(true); // 再次显示 UI 文本
+        uiTextObject.SetActive(true); 
     }
     else
     {
-        // 如果已是最后一次敲门声，不再进行操作
+        // If it is the last knock, no more operations are performed
     }
 }
 
