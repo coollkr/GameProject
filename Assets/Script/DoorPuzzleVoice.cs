@@ -5,22 +5,22 @@ using System.Collections.Generic;
 
 public class DoorPuzzleVoice : MonoBehaviour
 {
-    public GameObject uiTextObject; // UI 文本对象
-    public AudioClip[] knockingSounds; // 敲门声音数组
-    private AudioSource audioSource; // 播放声音的音频源
-    private int knockSequenceIndex = 0; // 敲门序列的索引
-    public List<GameObject> lights; // 灯光列表
+    public GameObject uiTextObject; 
+    public AudioClip[] knockingSounds; // Array of knocking sound clips.
+    private AudioSource audioSource; // AudioSource component for playing sounds.
+    private int knockSequenceIndex = 0; // Index to track the current knock in the sequence.
+    public List<GameObject> lights; // List of light objects to be controlled.
 
-    public GameObject characterModel; // 人物模型引用
-    private Vector3 startPostion = new Vector3(515, 1.4f, 89); // 人物起始位置
-    private Vector3 endPosition = new Vector3(515, 1.4f, -2); // 人物结束位置
-    private mouselook cameraScript; // mouselook 脚本的引用
-    public GameObject specialLight; // 特定灯光的引用
+    public GameObject characterModel; 
+    private Vector3 startPostion = new Vector3(515, 1.4f, 89); // ghost start location
+    private Vector3 endPosition = new Vector3(515, 1.4f, -2); // destinate locaiton
+    private mouselook cameraScript; // mouselook Script references
+    public GameObject specialLight; 
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // 获取音频源组件
-        uiTextObject.SetActive(false); // 初始隐藏 UI 文本对象
+        audioSource = GetComponent<AudioSource>(); 
+        uiTextObject.SetActive(false); 
 
             if (specialLight != null)
     {
@@ -28,7 +28,7 @@ public class DoorPuzzleVoice : MonoBehaviour
     }
 
         // 尝试找到主角上的 mouselook 脚本
-        GameObject mainCamera = GameObject.FindWithTag("MainCamera"); // 假设您的主摄像机有 "MainCamera" 的标签
+        GameObject mainCamera = GameObject.FindWithTag("MainCamera"); 
         if (mainCamera != null)
         {
             cameraScript = mainCamera.GetComponent<mouselook>();
@@ -45,35 +45,31 @@ public class DoorPuzzleVoice : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // 检查玩家是否进入触发区
         if (other.CompareTag("Player") && knockSequenceIndex < knockingSounds.Length)
         {
-            uiTextObject.SetActive(true); // 显示 UI 文本对象
+            uiTextObject.SetActive(true); 
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        // 检查玩家是否离开触发区
         if (other.CompareTag("Player"))
         {
-            uiTextObject.SetActive(false); // 隐藏 UI 文本对象
+            uiTextObject.SetActive(false); 
         }
     }
 
     void Update()
     {
-        // 检查玩家输入
         if (uiTextObject.activeSelf && Input.GetKeyDown(KeyCode.R))
         {
-            uiTextObject.SetActive(false); // 隐藏 UI 文本对象
-            PlayKnockingSound(); // 播放敲门声
+            uiTextObject.SetActive(false);
+            PlayKnockingSound(); 
         }
     }
 
     void PlayKnockingSound()
     {
-        // 播放敲门声音序列中的下一个声音
         if (knockSequenceIndex < knockingSounds.Length)
         {
             AudioClip knockSound = knockingSounds[knockSequenceIndex];
@@ -85,11 +81,11 @@ public class DoorPuzzleVoice : MonoBehaviour
 
     IEnumerator ShowUIAfterSound(float delay)
     {
-        if (knockSequenceIndex == 4) // 第四次敲门
+        if (knockSequenceIndex == 4) // The Fourth Knock
         {
-            yield return new WaitForSeconds(2); // 等待 2 秒
+            yield return new WaitForSeconds(2); // wait 2 seconds
 
-            // 控制灯光闪烁 4 秒
+            // Controls light blinking for 4 seconds
             float endTime = Time.time + 4;
             while (Time.time < endTime)
             {
@@ -100,17 +96,17 @@ public class DoorPuzzleVoice : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
             }
 
-            // 关闭灯光
+            // Turn off the lights.
             ToggleLights(false);
 
-            yield return new WaitForSeconds(2); // 在关闭灯光后等待 2 秒
+            yield return new WaitForSeconds(2); // Wait 2 seconds after turning off the light
 
-            // 激活并移动人物模型
+            // Activate and move the character model
             characterModel.SetActive(true);
-            cameraScript.SetFollowCharacterModel(true); // 启用镜头跟随
+            cameraScript.SetFollowCharacterModel(true); // Enable Lens Following
             characterModel.transform.position = startPostion;
 
-            float moveDuration = 3.0f; // 人物移动持续时间改为 3 秒
+            float moveDuration = 3.0f; // ghost move time
             float startTime = Time.time;
 
             while (Time.time < startTime + moveDuration)
@@ -120,16 +116,16 @@ public class DoorPuzzleVoice : MonoBehaviour
                 yield return null;
             }
 
-            cameraScript.SetFollowCharacterModel(false); // 禁用镜头跟随
+            cameraScript.SetFollowCharacterModel(false); // disabale lens folloing 
             characterModel.SetActive(false);
 
-            yield return new WaitForSeconds(1); // 禁用镜头跟随后等待 1 秒
+            yield return new WaitForSeconds(1); // Wait 1 second after disabling camera follow
 
-            // 关闭人物模型的同时打开所有灯光
+            // Turn off the ghost model and turn on all the lights at the same time
             ToggleLights(true);
             if (specialLight != null)
         {
-            yield return new WaitForSeconds(0.5f); // 等待 0.5 秒
+            yield return new WaitForSeconds(0.5f); 
             specialLight.SetActive(true);
         }
         }
@@ -144,13 +140,12 @@ public class DoorPuzzleVoice : MonoBehaviour
         }
         else
         {
-            // 最后一次敲门后不执行操作
+            // No operation after the last knock
         }
     }
 
     void ToggleLights(bool state)
     {
-        // 切换所有灯光的状态
         foreach (var light in lights)
         {
             light.SetActive(state);

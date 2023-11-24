@@ -3,14 +3,14 @@ using TMPro;
 
 public class KeyInteraction : MonoBehaviour
 {
-    public GameObject uiTextObject; // UI 文本对象的引用
-    public bool isKeyObtained = false; // 表示是否拿到钥匙
+    public GameObject uiTextObject; 
+    public bool isKeyObtained = false; // Indicates if you have the key.
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            uiTextObject.SetActive(true); // 显示 UI 文本
+            uiTextObject.SetActive(true);
         }
     }
 
@@ -18,8 +18,8 @@ public class KeyInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiTextObject.SetActive(false); // 隐藏 UI 文本
-        }
+            uiTextObject.SetActive(false); 
+    }
     }
 
     private void Update()
@@ -32,12 +32,9 @@ public class KeyInteraction : MonoBehaviour
 
     private void GetKey()
     {
-        // 实现获取钥匙的逻辑
-        Debug.Log("Key has been taken.");
-        isKeyObtained = true; // 设置钥匙为已获取状态
-        
-        // 可选：在获取钥匙后禁用或销毁钥匙对象
+        isKeyObtained = true; //  Setting the key to the Acquired state
         gameObject.SetActive(false);
         uiTextObject.SetActive(false);
     }
 }
+

@@ -5,7 +5,7 @@ using System.Collections;
 public class SceneTransitionManager : MonoBehaviour
 {
     public static SceneTransitionManager Instance { get; private set; }
-    private string currentTargetScene; // 当前要加载的场景名称
+    private string currentTargetScene; 
 
     void Awake()
     {
@@ -22,7 +22,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        currentTargetScene = sceneName; // 设置当前目标场景名称
+        currentTargetScene = sceneName; 
         SceneManager.sceneLoaded += OnSceneLoaded;
         SceneManager.LoadScene(sceneName);
     }

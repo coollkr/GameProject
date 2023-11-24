@@ -8,11 +8,11 @@ using UnityEngine;
 public class mouselook : MonoBehaviour
 {
     public Transform player;
-    public Transform characterModel; // 引用人物模型
+    public Transform characterModel; 
     private float mouseX, mouseY;
     public float mouseSensitivity = 200f;
     public float xRotation;
-    public bool followCharacterModel = false; // 控制是否跟随人物模型
+    public bool followCharacterModel = false; 
 
     void Start()
     {

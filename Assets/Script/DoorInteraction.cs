@@ -5,10 +5,10 @@ using System.Collections;
 
 public class DoorInteraction : MonoBehaviour
 {
-    public GameObject uiTextObject; // UI 文本对象的引用
-    public PuzzleCompletionChecker puzzleChecker; // 第一个谜题的脚本引用
-    public KeyInteraction keyInteraction; // 钥匙交互的脚本引用
-    public string targetScene = "SampleScene"; // 目标场景名称
+    public GameObject uiTextObject; 
+    public PuzzleCompletionChecker puzzleChecker; 
+    public KeyInteraction keyInteraction; 
+    public string targetScene = "SampleScene"; 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,7 +22,7 @@ public class DoorInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            uiTextObject.SetActive(false); // 隐藏 UI 文本
+            uiTextObject.SetActive(false); 
         }
     }
 
