@@ -106,7 +106,7 @@ public class DoorPuzzleVoice : MonoBehaviour
             cameraScript.SetFollowCharacterModel(true); // Enable Lens Following
             characterModel.transform.position = startPostion;
 
-            float moveDuration = 3.0f; // ghost move time
+            float moveDuration = 7.0f; // ghost move time
             float startTime = Time.time;
 
             while (Time.time < startTime + moveDuration)
@@ -120,6 +120,16 @@ public class DoorPuzzleVoice : MonoBehaviour
             characterModel.SetActive(false);
 
             yield return new WaitForSeconds(1); // Wait 1 second after disabling camera follow
+                    // Randomly toggle lights for 2 seconds
+            float randomToggleEndTime = Time.time + 2.0f;
+            while (Time.time < randomToggleEndTime)
+            {
+            foreach (var light in lights)
+            {
+                light.SetActive(Random.Range(0, 2) > 0);
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
 
             // Turn off the ghost model and turn on all the lights at the same time
             ToggleLights(true);
