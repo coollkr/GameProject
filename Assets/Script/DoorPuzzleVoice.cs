@@ -61,61 +61,61 @@ public class DoorPuzzleVoice : MonoBehaviour
         }
     }
 
-IEnumerator ShowUIAfterSound(float delay)
-{
-    if (knockSequenceIndex == 4) // Fourth knock.
+    IEnumerator ShowUIAfterSound(float delay)
     {
-        yield return new WaitForSeconds(2); // wait 2 seconds
-
-        // Controls light blinking for 4 seconds
-        float endTime = Time.time + 4;
-        while (Time.time < endTime)
+        if (knockSequenceIndex == 4) // Fourth knock
         {
-            foreach (var light in lights)
+            yield return new WaitForSeconds(2); // wait 2 seconds
+
+            // Controls light blinking for 4 seconds
+            float endTime = Time.time + 4;
+            while (Time.time < endTime)
             {
-                light.SetActive(Random.Range(0, 2) > 0); // Randomized light switch status
+                foreach (var light in lights)
+                {
+                    light.SetActive(Random.Range(0, 2) > 0);
+                }
+                yield return new WaitForSeconds(0.1f);
             }
-            yield return new WaitForSeconds(0.1f);
+
+            // turn off the light
+            ToggleLights(false);
+
+            yield return new WaitForSeconds(2); // Wait 2 seconds after turning off the light
+
+            // Activate and move the ghost model
+            characterModel.SetActive(true);
+            characterModel.transform.position = startPostion;
+
+            float moveDuration = 10.0f; // ghost movement duration changed to 10 seconds
+            float startTime = Time.time;
+
+            while (Time.time < startTime + moveDuration)
+            {
+                float t = (Time.time - startTime) / moveDuration;
+                characterModel.transform.position = Vector3.Lerp(startPostion, endPosition, t);
+                yield return null;
+            }
+
+            characterModel.SetActive(false);
+
+            // active light 
+            ToggleLights(true);
         }
-
-        // turn off light
-        ToggleLights(false);
-
-        yield return new WaitForSeconds(1); // wait 1 second
-
-        // Activate and move the character model for 5 seconds
-        characterModel.SetActive(true); // active modle
-        characterModel.transform.position = startPostion; // set start point
-
-        float moveDuration = 5.0f; 
-        float startTime = Time.time;
-
-        while (Time.time < startTime + moveDuration)
+        else
         {
-            float t = (Time.time - startTime) / moveDuration;
-            characterModel.transform.position = Vector3.Lerp(startPostion, endPosition, t);
-            yield return null;
+            yield return new WaitForSeconds(delay);
         }
 
-        characterModel.SetActive(false); // Not active model
-
-        // Turn on all lights the moment you disable the character model
-        ToggleLights(true);
+        if (knockSequenceIndex < knockingSounds.Length)
+        {
+            uiTextObject.SetActive(true); 
+        }
+        else
+        {
+            // no operation after last knock
+        }
     }
-    else
-    {
-        yield return new WaitForSeconds(delay); // Otherwise waiting
-    }
-
-    if (knockSequenceIndex < knockingSounds.Length)
-    {
-        uiTextObject.SetActive(true); 
-    }
-    else
-    {
-        // If it is the last knock, no more operations are performed
-    }
-}
 
 
 

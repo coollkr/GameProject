@@ -7,7 +7,7 @@ public class TP_Scene1 : MonoBehaviour {
     public string targetScene = "Scene1";
 
     void Awake() {
-        DontDestroyOnLoad(gameObject); // 保证场景加载时不销毁此对象
+        DontDestroyOnLoad(gameObject); // Ensure that this object is not destroyed when the scene loads
     }
 
     void OnTriggerEnter(Collider other) {
@@ -31,7 +31,7 @@ public class TP_Scene1 : MonoBehaviour {
         if (player != null) {
             CharacterController controller = player.GetComponent<CharacterController>();
             if (controller != null) {
-                controller.enabled = false; // 禁用 CharacterController
+                controller.enabled = false; // disable CharacterController
             }
 
             Transform spawnPoint = GameObject.Find("SpawnPoint").transform;
@@ -40,11 +40,11 @@ public class TP_Scene1 : MonoBehaviour {
             }
 
             if (controller != null) {
-                controller.enabled = true; // 重新启用 CharacterController
+                controller.enabled = true; // re active CharacterController
             }
         }
 
-        Destroy(gameObject); // 完成传送后销毁TP_Scene1所在的GameObject
+        Destroy(gameObject); // Destroy the GameObject where TP_Scene1 is located after completing the transfer.
     }
 
 
@@ -54,7 +54,8 @@ public class TP_Scene1 : MonoBehaviour {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null) {
                 player.transform.position = spawnPoint.position;
-                // 这里也可以添加其他传送完成后的逻辑，如调整角色朝向等
+                // Here you can also add other logic after the teleportation is complete, 
+                //such as adjusting the character's orientation
             }
         }
     }
