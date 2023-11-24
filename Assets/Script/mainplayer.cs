@@ -22,7 +22,7 @@ public class mainplayer : MonoBehaviour
     
     
     
-    private Animation _animation;
+    private Animator animator;
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -30,7 +30,7 @@ public class mainplayer : MonoBehaviour
         
         groundMask = LayerMask.GetMask("ground");
         Cursor.lockState = CursorLockMode.Locked;
-        
+        animator = GetComponentInChildren<Animator>();
         
         
     }
@@ -93,7 +93,10 @@ public class mainplayer : MonoBehaviour
             }
             
             
-
+            if (moveDirection == Vector3.zero && !Input.GetButtonDown("Jump"))
+            {
+                idle();
+            }
             
         }
 
@@ -118,14 +121,20 @@ public class mainplayer : MonoBehaviour
     
     
     //movement function or change speed when walking or Running.
+    private void idle()
+    {
+        animator.SetFloat("speed", 0,0.1f, Time.deltaTime);
+    }
     private void Walk()
     {
         moveSpeed = WalkSpeed;
+        animator.SetFloat("speed", 0.5f,0.1f, Time.deltaTime);
     }
 
     private void Run()
     {
         moveSpeed = RunSpeed;
+        animator.SetFloat("speed", 1, 0.1f, Time.deltaTime);
     }
     
     private void Jump()
