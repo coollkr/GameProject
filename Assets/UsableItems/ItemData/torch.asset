@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dcc8a3c9d980a14ba46641fedede468, type: 3}
   m_Name: torch
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  value: 0
-  icon: {fileID: 0}
+  id: 10002
+  itemName: Torch
+  value: 2
+  icon: {fileID: 21300000, guid: 790a23f5e10635648b470bd275412c2d, type: 3}

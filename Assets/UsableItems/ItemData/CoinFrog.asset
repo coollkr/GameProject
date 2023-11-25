@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1dcc8a3c9d980a14ba46641fedede468, type: 3}
-  m_Name: New Item
+  m_Name: CoinFrog
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  value: 0
-  icon: {fileID: 0}
+  id: 10001
+  itemName: Coin Frog
+  value: 1
+  icon: {fileID: 21300000, guid: 73e52f889dfa68848a069ad8947f9f04, type: 3}
