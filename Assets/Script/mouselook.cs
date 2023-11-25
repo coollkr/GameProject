@@ -8,23 +8,34 @@ using UnityEngine;
 public class mouselook : MonoBehaviour
 {
     public Transform player;
+    public Transform characterModel; 
     private float mouseX, mouseY;
     public float mouseSensitivity = 200f;
     public float xRotation;
+    public bool followCharacterModel = false; 
 
-    public void Start()
+    void Start()
     {
-        
-            player = GameObject.Find("maincharacter").transform;
-            if (player == null)
-            {
-                Debug.LogError("no player component found.");  
-            }
-        
-        
+        player = GameObject.FindWithTag("Player").transform;
+        if (player == null)
+        {
+            Debug.LogError("No player component found.");
+        }
     }
 
-    private void Update()
+    void Update()
+    {
+        if (followCharacterModel && characterModel != null)
+        {
+            FollowCharacterModel();
+        }
+        else
+        {
+            PlayerControlledLook();
+        }
+    }
+
+    private void PlayerControlledLook()
     {
         Cursor.lockState = CursorLockMode.Locked;
         mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -36,4 +47,17 @@ public class mouselook : MonoBehaviour
         player.Rotate(Vector3.up * mouseX);
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
     }
+
+    private void FollowCharacterModel()
+    {
+        Vector3 directionToCharacterModel = characterModel.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(directionToCharacterModel);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * mouseSensitivity);
+    }
+
+    public void SetFollowCharacterModel(bool state)
+    {
+        followCharacterModel = state;
+    }
 }
+

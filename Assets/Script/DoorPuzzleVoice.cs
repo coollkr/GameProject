@@ -1,57 +1,75 @@
+
 using UnityEngine;
-using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
 public class DoorPuzzleVoice : MonoBehaviour
 {
-    public GameObject uiTextObject; // UI Text object that will be toggled
-    public AudioClip[] knockingSounds; // Array of knocking sounds
-    private AudioSource audioSource; // Audio source for playing knocking sounds
-    private int knockSequenceIndex = 0; // Index to track the current knock in the sequence
-    public List<GameObject> lights; // List of lights to be controlled
+    public GameObject uiTextObject; 
+    public AudioClip[] knockingSounds; // Array of knocking sound clips.
+    private AudioSource audioSource; // AudioSource component for playing sounds.
+    private int knockSequenceIndex = 0; // Index to track the current knock in the sequence.
+    public List<GameObject> lights; // List of light objects to be controlled.
 
-    public GameObject characterModel; // Reference to the character model
-    private Vector3 startPostion = new Vector3(515, 1.4f, 89); // Start position of the character
-    private Vector3 endPosition = new Vector3(515, 1.4f, -2); // End position of the character
+    public GameObject characterModel; 
+    private Vector3 startPostion = new Vector3(515, 1.4f, 89); // ghost start location
+    private Vector3 endPosition = new Vector3(515, 1.4f, -2); // destinate locaiton
+    private mouselook cameraScript; // mouselook Script references
+    public GameObject specialLight; 
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // Get the audio source component
-        uiTextObject.SetActive(false); // Initially hide the UI text object
+        audioSource = GetComponent<AudioSource>(); 
+        uiTextObject.SetActive(false); 
+
+            if (specialLight != null)
+    {
+        specialLight.SetActive(false);
+    }
+
+        // 尝试找到主角上的 mouselook 脚本
+        GameObject mainCamera = GameObject.FindWithTag("MainCamera"); 
+        if (mainCamera != null)
+        {
+            cameraScript = mainCamera.GetComponent<mouselook>();
+            if (cameraScript == null)
+            {
+                Debug.LogError("mouselook script not found on the main camera.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Main camera not found.");
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        // Check if the player enters the trigger zone
         if (other.CompareTag("Player") && knockSequenceIndex < knockingSounds.Length)
         {
-            uiTextObject.SetActive(true); // Show the UI text object
+            uiTextObject.SetActive(true); 
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        // Check if the player exits the trigger zone
         if (other.CompareTag("Player"))
         {
-            uiTextObject.SetActive(false); // Hide the UI text object
+            uiTextObject.SetActive(false); 
         }
     }
 
     void Update()
     {
-        // Check for player input
         if (uiTextObject.activeSelf && Input.GetKeyDown(KeyCode.R))
         {
-            uiTextObject.SetActive(false); // Hide the UI text object
-            PlayKnockingSound(); // Play the knocking sound
+            uiTextObject.SetActive(false);
+            PlayKnockingSound(); 
         }
     }
 
     void PlayKnockingSound()
     {
-        // Play the next sound in the knocking sequence
         if (knockSequenceIndex < knockingSounds.Length)
         {
             AudioClip knockSound = knockingSounds[knockSequenceIndex];
@@ -61,67 +79,83 @@ public class DoorPuzzleVoice : MonoBehaviour
         }
     }
 
-IEnumerator ShowUIAfterSound(float delay)
-{
-    if (knockSequenceIndex == 4) // Fourth knock.
+    IEnumerator ShowUIAfterSound(float delay)
     {
-        yield return new WaitForSeconds(2); // wait 2 seconds
-
-        // Controls light blinking for 4 seconds
-        float endTime = Time.time + 4;
-        while (Time.time < endTime)
+        if (knockSequenceIndex == 4) // The Fourth Knock
         {
+            yield return new WaitForSeconds(2); // wait 2 seconds
+
+            // Controls light blinking for 4 seconds
+            float endTime = Time.time + 4;
+            while (Time.time < endTime)
+            {
+                foreach (var light in lights)
+                {
+                    light.SetActive(Random.Range(0, 2) > 0);
+                }
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            // Turn off the lights.
+            ToggleLights(false);
+
+            yield return new WaitForSeconds(2); // Wait 2 seconds after turning off the light
+
+            // Activate and move the character model
+            characterModel.SetActive(true);
+            cameraScript.SetFollowCharacterModel(true); // Enable Lens Following
+            characterModel.transform.position = startPostion;
+
+            float moveDuration = 7.0f; // ghost move time
+            float startTime = Time.time;
+
+            while (Time.time < startTime + moveDuration)
+            {
+                float t = (Time.time - startTime) / moveDuration;
+                characterModel.transform.position = Vector3.Lerp(startPostion, endPosition, t);
+                yield return null;
+            }
+
+            cameraScript.SetFollowCharacterModel(false); // disabale lens folloing 
+            characterModel.SetActive(false);
+
+            yield return new WaitForSeconds(1); // Wait 1 second after disabling camera follow
+                    // Randomly toggle lights for 2 seconds
+            float randomToggleEndTime = Time.time + 2.0f;
+            while (Time.time < randomToggleEndTime)
+            {
             foreach (var light in lights)
             {
-                light.SetActive(Random.Range(0, 2) > 0); // Randomized light switch status
+                light.SetActive(Random.Range(0, 2) > 0);
             }
             yield return new WaitForSeconds(0.1f);
         }
 
-        // turn off light
-        ToggleLights(false);
-
-        yield return new WaitForSeconds(1); // wait 1 second
-
-        // Activate and move the character model for 5 seconds
-        characterModel.SetActive(true); // active modle
-        characterModel.transform.position = startPostion; // set start point
-
-        float moveDuration = 5.0f; 
-        float startTime = Time.time;
-
-        while (Time.time < startTime + moveDuration)
+            // Turn off the ghost model and turn on all the lights at the same time
+            ToggleLights(true);
+            if (specialLight != null)
         {
-            float t = (Time.time - startTime) / moveDuration;
-            characterModel.transform.position = Vector3.Lerp(startPostion, endPosition, t);
-            yield return null;
+            yield return new WaitForSeconds(0.5f); 
+            specialLight.SetActive(true);
+        }
+        }
+        else
+        {
+            yield return new WaitForSeconds(delay);
         }
 
-        characterModel.SetActive(false); // Not active model
-
-        // Turn on all lights the moment you disable the character model
-        ToggleLights(true);
+        if (knockSequenceIndex < knockingSounds.Length)
+        {
+            uiTextObject.SetActive(true); 
+        }
+        else
+        {
+            // No operation after the last knock
+        }
     }
-    else
-    {
-        yield return new WaitForSeconds(delay); // Otherwise waiting
-    }
-
-    if (knockSequenceIndex < knockingSounds.Length)
-    {
-        uiTextObject.SetActive(true); 
-    }
-    else
-    {
-        // If it is the last knock, no more operations are performed
-    }
-}
-
-
 
     void ToggleLights(bool state)
     {
-        // Toggle the state of all lights
         foreach (var light in lights)
         {
             light.SetActive(state);

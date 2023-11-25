@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efa33aac-a845-4d42-93ad-f28aac984b9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Height.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Height.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab_MetallicSmoothness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab_MetallicSmoothness.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Concrete slab_Normal.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Demo fire.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Demo fire.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Floor3.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Floor3.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Lightmap-0_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Lightmap-0_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/Readme.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/ReflectionProbe-0.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/ReflectionProbe-1.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Demo scene/ReflectionProbe-1.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/FireSphere1.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/FireSphere1.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/FireSphere2.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/FireSphere2.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/Smoke26.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/Smoke26.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/SparkSphere.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/SparkSphere.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/Trail67.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Materials/Trail67.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Explosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Explosion.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 0.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 0.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire 3.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro blue.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro blue.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro green.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro green.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro orange.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro orange.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro red.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro red.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro yellow.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/Magic fire pro yellow.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/RotatorPS1.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/RotatorPS1.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/RotatorPS2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Prefabs/RotatorPS2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Shaders/FireSphere.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Shaders/FireSphere.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Shaders/FireSphere.shadergraph" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Shaders/FireSphere.shadergraph.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/FireSphere1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/FireSphere1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/FireSphere2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/FireSphere2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/Smoke26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/Smoke26.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/Trail67.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/Textures/Trail67.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/URP and HDRP.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/URP and HDRP/How to change rendering pipeline.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Chen/Hovl Studio/Procedural fire/URP and HDRP/How to change rendering pipeline.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/DoorInteraction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/DoorInteraction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/KeyInteraction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/KeyInteraction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Scene1Logic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Scene1Logic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/TeleportHelpFunction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/TeleportHelpFunction.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Ghost1(Test).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Ghost1(Test).prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Parasite L Starkie.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Parasite L Starkie.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Wheelbarrow Walk.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Wheelbarrow Walk.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Wheelbarrow Walk.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/model/Wheelbarrow Walk.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scene1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scene1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/DoorPuzzleVoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/DoorPuzzleVoice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Puzzle1Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Puzzle1Check.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TP_Scene1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TP_Scene1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/mouselook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/mouselook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/model/maincharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/model/maincharacter.prefab" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2YfryCBO6YGOBnprQbb12t2d9Er" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efa33aac-a845-4d42-93ad-f28aac984b9b" name="Changes" comment="" />
+      <created>1700927728838</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700927728838</updated>
+      <workItem from="1700927734261" duration="309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

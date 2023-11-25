@@ -8,6 +8,7 @@ public class PuzzleCompletionChecker : MonoBehaviour
     public GameObject lion3;
     public GameObject lion4;
     public TextMeshProUGUI completionText; 
+    public bool isPuzzleCompleted = false;
 
     private void CheckPuzzleCompletion()
     {
@@ -19,11 +20,13 @@ public class PuzzleCompletionChecker : MonoBehaviour
         {
             completionText.text = "Puzzle complete!"; 
             completionText.enabled = true;
+            isPuzzleCompleted = true;
         }
         else
         {
             completionText.text = "Fail!"; 
             completionText.enabled = true;
+            isPuzzleCompleted = false;
         }
     }
 
