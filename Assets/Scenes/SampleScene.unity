@@ -2299,24 +2299,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.62, y: 1.71, z: 0.38}
   m_Center: {x: -0.02, y: 1.08, z: 0}
---- !u!114 &491167701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491167696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c66fc79cfbec35745928e4c23f92b36f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  path: {fileID: 1743698679}
-  chaseDis: 60
-  patrolSpeed: 5.46
-  chasingSpeed: 8.25
-  safesapce: {fileID: 1677759134}
 --- !u!1 &522237583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5140,9 +5122,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1060515173}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b939b447e54e70a40b91ddfde5c77c7d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 491167701}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b939b447e54e70a40b91ddfde5c77c7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 491167700}
