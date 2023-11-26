@@ -8,10 +8,12 @@ public class ItemDisplay : MonoBehaviour
     public InventoryManager manager;
     private List<UsableItem> items;
     private List<Transform> itemDisplay;
+    public Sprite yinyang;
 
     public void Start()
     {
         itemDisplay = new List<Transform>();
+        
 
         foreach(Transform child in transform)
         {
@@ -19,39 +21,54 @@ public class ItemDisplay : MonoBehaviour
         }
 
     }
-    void Update()
+    public void Update()
     {
         items = manager.getItems();
 
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < 6; i++)
         {
-            if (itemDisplay[i] == null)
+
+            if (i < items.Count)
             {
-                Debug.Log("No child Button.");
-            }
+                Transform itemNameTransform = itemDisplay[i].transform.Find("ItemName");
+                TMPro.TextMeshProUGUI itemNameText = itemNameTransform.GetComponent<TMPro.TextMeshProUGUI>();
 
-            Transform itemNameTransform = itemDisplay[i].transform.Find("ItemName");
-            if(itemNameTransform == null) {
-                Debug.Log("No ItemName");
-            }
+                if (itemNameText != null)
+                {
+                    itemNameText.text = items[i].itemName;
+                }
 
-            TMPro.TextMeshProUGUI itemNameText = itemNameTransform.GetComponent<TMPro.TextMeshProUGUI>();
-            
-            if (itemNameText != null)
+                Transform iconTransform = itemDisplay[i].transform.Find("Icon");
+
+
+                Image iconImage = iconTransform.GetComponent<Image>();
+
+
+                if (iconImage != null)
+                {
+                    iconImage.sprite = items[i].icon;
+                }
+            }
+            else
             {
-                itemNameText.text = items[i].itemName;
+                Transform itemNameTransform = itemDisplay[i].transform.Find("ItemName");
+                TMPro.TextMeshProUGUI itemNameText = itemNameTransform.GetComponent<TMPro.TextMeshProUGUI>();
+                if (itemNameText != null)
+                {
+                    itemNameText.text = "";
+                }
+
+                Transform iconTransform = itemDisplay[i].transform.Find("Icon");
+                Image iconImage = iconTransform.GetComponent<Image>();
+                if(iconImage != null)
+                {
+                    iconImage.sprite = yinyang;
+                }
+
             }
 
-            Transform iconTransform = itemDisplay[i].transform.Find("Icon");
-            Debug.Log($"Icon Transform[{i}]: {iconTransform}");
 
-            Image iconImage = iconTransform.GetComponent<Image>();
-            Debug.Log($"Icon Image[{i}]: {iconImage}");
 
-            if (iconImage != null)
-            {
-                iconImage.sprite = items[i].icon;
-            }
         }
     }
 }
