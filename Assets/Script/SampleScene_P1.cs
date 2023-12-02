@@ -45,7 +45,7 @@ public class Candle : MonoBehaviour
 
     IEnumerator LightCandleRoutine()
     {
-        closeCandleText.gameObject.SetActive(false); 
+        closeCandleText.gameObject.SetActive(false);
         lightingText.text = "Lighting the candle";
         yield return new WaitForSeconds(2);
 
@@ -56,11 +56,14 @@ public class Candle : MonoBehaviour
         }
 
         lightingText.text = "The candles have been lit.";
-        candleLight.enabled = true; 
+        candleLight.enabled = true;
         isCandleLit = true;
+        GameStateManager.Instance.CandleLit(); 
+
         yield return new WaitForSeconds(2);
-        lightingText.text = ""; 
+        lightingText.text = "";
     }
+    
 
     void OnTriggerEnter(Collider other)
     {

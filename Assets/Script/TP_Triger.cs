@@ -1,24 +1,17 @@
+// 在 TeleportScript.cs 中
 using UnityEngine;
 using TMPro;
 
 public class TeleportScript : MonoBehaviour
 {
     public Transform teleportTarget; // Teleportation target location
-    public GameObject enterRoomDialog; 
-    public GameObject exitRoomDialog; 
+    public TextMeshProUGUI enterRoomDialog; 
+    public TextMeshProUGUI exitRoomDialog; 
 
-    private bool playerInTrigger = false; // Check the player is in the trigger zone or not
-
-    void Start()
-    {
-        // Make sure the dialog box is not displayed at first
-        ActivateDialog(enterRoomDialog, false);
-        ActivateDialog(exitRoomDialog, false);
-    }
+    private bool playerInTrigger = false; // Check if the player is in the trigger zone
 
     void Update()
     {
-        // Check if the player is in the trigger zone and has pressed the R key
         if (playerInTrigger && Input.GetKeyDown(KeyCode.R))
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -34,8 +27,7 @@ public class TeleportScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInTrigger = true;
-            ActivateDialog(enterRoomDialog, true);
-            ActivateDialog(exitRoomDialog, true);
+            UpdateDialog(true);
         }
     }
 
@@ -44,42 +36,41 @@ public class TeleportScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInTrigger = false;
-            ActivateDialog(enterRoomDialog, false);
-            ActivateDialog(exitRoomDialog, false);
+            UpdateDialog(false);
         }
     }
 
     private void TeleportPlayer(GameObject player)
     {
-        Collider playerCollider = player.GetComponent<Collider>();
-        if (playerCollider != null) 
+        if (GameStateManager.Instance.AreAllPuzzlesSolved())
         {
-            playerCollider.enabled = false; // Disable colliders before teleportation
+            player.transform.position = teleportTarget.position; // Teleport the player!
+            enterRoomDialog.text = "You solved all puzzles, time to run!";
         }
-
-        player.transform.position = teleportTarget.position; // Teleport the player!
-
-        if (playerCollider != null) 
+        else
         {
-            playerCollider.enabled = true; // Re-enable collider after teleportation
+            enterRoomDialog.text = "Puzzle incomplete!";
         }
     }
 
-    private void ActivateDialog(GameObject dialog, bool isActive)
+    private void UpdateDialog(bool isActive)
     {
-        if (dialog != null)
+        if (isActive)
         {
-            dialog.SetActive(isActive);
-            ToggleTextMeshPro(dialog, isActive);
+            if (GameStateManager.Instance.AreAllPuzzlesSolved())
+            {
+                enterRoomDialog.gameObject.SetActive(true);
+                enterRoomDialog.text = "Press R to teleport";
+            }
+            else
+            {
+                enterRoomDialog.gameObject.SetActive(true);
+                enterRoomDialog.text = "Puzzle incomplete!";
+            }
         }
-    }
-
-    private void ToggleTextMeshPro(GameObject dialog, bool isActive)
-    {
-        TextMeshProUGUI tmpText = dialog.GetComponentInChildren<TextMeshProUGUI>(true); 
-        if (tmpText != null)
+        else
         {
-            tmpText.gameObject.SetActive(isActive);
+            enterRoomDialog.gameObject.SetActive(false);
         }
     }
 }

@@ -10,9 +10,14 @@ public class Puzzle2 : MonoBehaviour
    
     public bool IsSolved()
     {
-
-        return (frog.IsSolved() && sword.IsSolved() && fan.IsSolved());   
-
+    bool solved = frog.IsSolved() && sword.IsSolved() && fan.IsSolved();
+    GameStateManager.Instance.puzzle2Solved = solved;
+    return solved; 
     }
+
+ void Update()
+{
+    IsSolved();
+}
 
 }
