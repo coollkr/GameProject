@@ -1,22 +1,14 @@
 using UnityEngine;
 
-public class WhiteOutEffect : MonoBehaviour
+public class EndGameTrigger : MonoBehaviour
 {
-    public GameObject whitePanel; 
+    public EndGameController endGameController;
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player")) 
-        {
-            whitePanel.SetActive(true); 
-        }
-    }
-
-    void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            whitePanel.SetActive(false); 
+            endGameController.TriggerEndGame();
         }
     }
 }
