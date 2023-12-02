@@ -18,8 +18,8 @@ public class TeleportScript : MonoBehaviour
 
     void Update()
     {
-        // Check if the player is in the trigger zone and has pressed the F key
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.F))
+        // Check if the player is in the trigger zone and has pressed the R key
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.R))
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
