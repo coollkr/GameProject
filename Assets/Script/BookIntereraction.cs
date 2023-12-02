@@ -12,6 +12,8 @@ public class BookInteraction : MonoBehaviour
 
     private bool isPlayerNear = false;
     private bool isBookOpen = false;
+    private Coroutine fadeInCoroutine;
+
 
     void Start()
     {
@@ -33,10 +35,14 @@ public class BookInteraction : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerNear = true;
-            // Starts the incremental OpenBookPrompt concatenation.
-            StartCoroutine(FadeInText(openBookPrompt, "Press R to Open Book", 1f)); 
+            if (fadeInCoroutine != null)
+            {
+                StopCoroutine(fadeInCoroutine);
+            }
+            fadeInCoroutine = StartCoroutine(FadeInText(openBookPrompt, "Press R to Open Book", 1f));
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -44,6 +50,11 @@ public class BookInteraction : MonoBehaviour
         {
             isPlayerNear = false;
             CloseBook();
+            if (fadeInCoroutine != null)
+            {
+                StopCoroutine(fadeInCoroutine);
+                fadeInCoroutine = null;
+            }
         }
     }
 
