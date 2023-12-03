@@ -21,7 +21,7 @@ public class NPCstricpt : MonoBehaviour
             NewDialogue("Player: Who are you? why am i here?");
             NewDialogue("Zhang: Don't waste time, come in quickly");
             NewDialogue("Zhang: You will find all the answers inside the temple"); 
-            NewDialogue("Player: (talking to himself): These two people are too strange and don’t say anything. I think I'd better take a look around first.");
+            NewDialogue("Player: (talking to himself): This people are too strange and don’t say anything. I think I'd better take a look around first.");
             NewDialogue("Player: Who are you? why am i here?");
             canva.transform.GetChild(1).gameObject.SetActive(true);
         }
