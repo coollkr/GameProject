@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009012734, g: 0.013102855, b: 0.02050359, a: 1}
+  m_IndirectSpecularColor: {r: 0.008975641, g: 0.013044867, b: 0.02042249, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8236,12 +8236,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1097147, y: 1.7100003, z: 1.322949}
-  m_Center: {x: -0.07021073, y: 1.0799998, z: 0.07428818}
+  m_Size: {x: 0.62, y: 1.71, z: 0.38}
+  m_Center: {x: -0.02, y: 1.08, z: 0}
 --- !u!95 &491167701
 Animator:
   serializedVersion: 5
@@ -15666,9 +15666,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "I am Liang\nI got hit by that monster and I felt bad, I felt like I couldn't
-    get out. I'll try to tell you as much as I can.\n\n*UPDATE\n\nyou can save the
+    get out. I'll try to tell you as much as I can.\n\n*UPDATE\n\nYou can save the
     evil place. Please find three Talismans, then you will know what to do. \nGo
-    Second floor!\n(Press \"i\" to open your Tai-Chi Scroll)"
+    to the second floor!\n(Press \"i\" to open your Tai-Chi Scroll)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
