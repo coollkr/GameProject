@@ -21,11 +21,18 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         Debug.Log("Damaged! Current Health: " + currentHealth);
 
+        HealthEffectController healthEffectController = FindObjectOfType<HealthEffectController>();
+        if (healthEffectController != null)
+        {
+            healthEffectController.TriggerHealthEffect();
+        }
+
         if (currentHealth <= 0)
         {
             Respawn();
         }
     }
+
 
     private void Respawn()
     {

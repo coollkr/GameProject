@@ -6,6 +6,7 @@ public class LaternController : MonoBehaviour
     public GameObject lightObject; 
     public TextMeshProUGUI uiText; 
     public GameObject latern; 
+    public GameObject roomWithDoor; 
     private bool isPlayerNear = false;
 
     void Start()
@@ -38,6 +39,12 @@ public class LaternController : MonoBehaviour
                 if (uiText != null)
                 {
                     uiText.gameObject.SetActive(false); 
+                }
+
+                if (roomWithDoor != null)
+                {
+                    roomWithDoor.SetActive(true);
+                    Debug.Log("Room with door activated.");
                 }
             }
         }
