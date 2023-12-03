@@ -44,8 +44,7 @@ public class TeleportScript : MonoBehaviour
     {
         if (GameStateManager.Instance.AreAllPuzzlesSolved())
         {
-            player.transform.position = teleportTarget.position; // Teleport the player!
-            enterRoomDialog.text = "You solved all puzzles, time to run!";
+            player.transform.position = teleportTarget.position; 
         }
         else
         {
@@ -60,7 +59,7 @@ public class TeleportScript : MonoBehaviour
             if (GameStateManager.Instance.AreAllPuzzlesSolved())
             {
                 enterRoomDialog.gameObject.SetActive(true);
-                enterRoomDialog.text = "Press R to teleport";
+                enterRoomDialog.text = "You solved all puzzles, time to run! Press R to teleport";
             }
             else
             {
@@ -73,4 +72,5 @@ public class TeleportScript : MonoBehaviour
             enterRoomDialog.gameObject.SetActive(false);
         }
     }
+
 }

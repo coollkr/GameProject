@@ -17,23 +17,19 @@ public class Player_controll : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
 
+    void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision Detected with: " + collision.gameObject.name);
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            
             animator.SetTrigger("attack");
         }
     }
 
-    
-    void OnCollisionStay(Collision collision)
+    void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-           
             animator.SetTrigger("attack");
         }
     }
