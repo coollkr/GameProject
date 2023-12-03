@@ -16,9 +16,13 @@ public class NPCstricpt : MonoBehaviour
         {
             canva.SetActive(true);
             mainplayer.dialogue = true;
-            NewDialogue("Hi.");
-            NewDialogue("My name is Kairui Liang.");
-            NewDialogue("Nice to meet you!");
+            NewDialogue("Player: where is here? ");
+            NewDialogue("Zhang: Everything you want to know is inside the temple, come in.");
+            NewDialogue("Player: Who are you? why am i here?");
+            NewDialogue("Zhang: Don't waste time, come in quickly");
+            NewDialogue("Zhang: You will find all the answers inside the temple"); 
+            NewDialogue("Player: (talking to himself): This people are too strange and don’t say anything. I think I'd better take a look around first.");
+            NewDialogue("Player: Who are you? why am i here?");
             canva.transform.GetChild(1).gameObject.SetActive(true);
         }
         
@@ -43,5 +47,6 @@ public class NPCstricpt : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         player_detection = false;
+        canva.gameObject.SetActive(false);
     }
 }
