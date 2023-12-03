@@ -18,8 +18,8 @@ public class mainplayer : MonoBehaviour
     public float gravity = -9.8f;
     public LayerMask groundMask;
     public float jumpHeight = 3f;
-    
-    
+
+    static public bool dialogue = false;
     
     
     private Animator animator;
@@ -30,6 +30,7 @@ public class mainplayer : MonoBehaviour
         
         groundMask = LayerMask.GetMask("ground");
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         animator = GetComponentInChildren<Animator>();
         
         
@@ -39,7 +40,9 @@ public class mainplayer : MonoBehaviour
     void Update()
     {
         //call move function
-        Move();
+        
+            Move();
+        
         
     }
     
