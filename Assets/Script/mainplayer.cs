@@ -48,7 +48,7 @@ public class mainplayer : MonoBehaviour
     
     private void Move()
     {
-        
+        //check if the character is on the ground by checkSphere.
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
 
         
@@ -63,13 +63,13 @@ public class mainplayer : MonoBehaviour
         var moveX = Input.GetAxis("Horizontal");
         
         
-
+        
         moveDirection = new Vector3(moveX, 0, moveZ);
         moveDirection = transform.TransformDirection(moveDirection);
         
         
         
-        
+        // if the character is on the ground then do the movement.
         if (isGrounded)
         {
             
@@ -104,7 +104,7 @@ public class mainplayer : MonoBehaviour
         }
 
        
-        // if player is not on the ground.
+        
         
 
 
@@ -113,7 +113,7 @@ public class mainplayer : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
         
        
-        
+        //keep gravity on the character
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 

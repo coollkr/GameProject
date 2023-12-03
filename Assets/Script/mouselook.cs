@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+//this script is to change the camera position based on your mouse.
 public class mouselook : MonoBehaviour
 {
     public Transform player;
@@ -34,7 +34,9 @@ public class mouselook : MonoBehaviour
             PlayerControlledLook();
         }
     }
-
+    
+    
+    //rotation the camera based on the mouse X and Y.
     private void PlayerControlledLook()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -47,7 +49,8 @@ public class mouselook : MonoBehaviour
         player.Rotate(Vector3.up * mouseX);
         transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
     }
-
+    
+    //method to follow main character.
     private void FollowCharacterModel()
     {
         Vector3 directionToCharacterModel = characterModel.position - transform.position;
