@@ -5592,7 +5592,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Liang: The exit door is lock
 
-    Seems need to slove the puzzles'
+    Seems need to solve the puzzles'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8024,6 +8024,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2aec408719fa1f445af0f579d45bb8eb, type: 2}
+    - target: {fileID: 789007885718225000, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.x
+      value: 2.125639
+      objectReference: {fileID: 0}
+    - target: {fileID: 789007885718225000, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.y
+      value: 19.77115
+      objectReference: {fileID: 0}
+    - target: {fileID: 789007885718225000, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.z
+      value: 2.0516553
+      objectReference: {fileID: 0}
+    - target: {fileID: 789007885718225000, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.x
+      value: -0.33740613
+      objectReference: {fileID: 0}
+    - target: {fileID: 789007885718225000, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.y
+      value: 9.385568
+      objectReference: {fileID: 0}
+    - target: {fileID: 789007885718225000, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.z
+      value: -0.5258276
+      objectReference: {fileID: 0}
     - target: {fileID: 1649832889480729939, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
       propertyPath: lion2
       value: 
@@ -8036,6 +8060,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2aec408719fa1f445af0f579d45bb8eb, type: 2}
+    - target: {fileID: 2451691864113015042, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4284294
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451691864113015042, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2047327
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451691864113015042, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.x
+      value: -0.38382933
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451691864113015042, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6023652
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621789212016060444, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.626
+      objectReference: {fileID: 0}
     - target: {fileID: 2827726874389334904, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
       propertyPath: m_LocalPosition.x
       value: 476.09003
@@ -8084,10 +8128,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: light
       objectReference: {fileID: 0}
+    - target: {fileID: 6360179913571674906, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6597718060987282104, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2aec408719fa1f445af0f579d45bb8eb, type: 2}
+    - target: {fileID: 6729047713483821741, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133245802509758681, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15248866
+      objectReference: {fileID: 0}
+    - target: {fileID: 7133245802509758681, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.561
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218332740042117034, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5510325
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218332740042117034, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.y
+      value: 2.2502198
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218332740042117034, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Size.z
+      value: 1.6054194
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218332740042117034, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.x
+      value: -0.27551454
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218332740042117034, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6251075
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218332740042117034, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
+      propertyPath: m_Center.z
+      value: -0.30270916
+      objectReference: {fileID: 0}
     - target: {fileID: 8020059842399713899, guid: 926b496ade47e8d4698a9d96d5d75427, type: 3}
       propertyPath: m_Name
       value: Building1_Puzzle1_Lion
