@@ -9,6 +9,7 @@ public class Player_controll : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        Debug.Log("Collision Detected with: ");
     }
 
     // Update is called once per frame
@@ -17,10 +18,12 @@ public class Player_controll : MonoBehaviour
         
     }
     void OnCollisionEnter(Collision collision)
+
     {
+        Debug.Log("Collision Detected with: " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
-          
+            
             animator.SetTrigger("attack");
         }
     }
@@ -30,7 +33,7 @@ public class Player_controll : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
+           
             animator.SetTrigger("attack");
         }
     }
