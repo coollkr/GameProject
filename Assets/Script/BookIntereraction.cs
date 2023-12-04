@@ -2,8 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 
-public class BookInteraction : MonoBehaviour
-{
+public class BookInteraction : MonoBehaviour{
     public GameObject greyBackgroundCanvas; 
     public TMP_Text bookText; 
     public GameObject openBookPrompt; 
@@ -15,23 +14,20 @@ public class BookInteraction : MonoBehaviour
     private Coroutine fadeInCoroutine;
 
 
-    void Start()
-    {
+    void Start(){
         greyBackgroundCanvas.SetActive(false);
         openBookPrompt.SetActive(false);
         closeBookPrompt.SetActive(false);
     }
 
-    void Update()
-    {
+    void Update(){
         if (isPlayerNear && Input.GetKeyDown(KeyCode.R))
         {
             ToggleBookUI();
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other){
         if (other.CompareTag("Player"))
         {
             isPlayerNear = true;
@@ -44,8 +40,7 @@ public class BookInteraction : MonoBehaviour
     }
 
 
-    private void OnTriggerExit(Collider other)
-    {
+    private void OnTriggerExit(Collider other){
         if (other.CompareTag("Player"))
         {
             isPlayerNear = false;
@@ -58,8 +53,7 @@ public class BookInteraction : MonoBehaviour
         }
     }
 
-    void ToggleBookUI()
-    {
+    void ToggleBookUI(){
         isBookOpen = !isBookOpen;
         greyBackgroundCanvas.SetActive(isBookOpen);
         if (isBookOpen)
