@@ -1,11 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class EndGameTrigger : MonoBehaviour
 {
     public EndGameController endGameController;
-    public TP_MainMenu tpSceneScript; 
-    public float delayBeforeTeleport = 5.0f; 
+    public float delayBeforeRestart = 5.0f; 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,14 +13,13 @@ public class EndGameTrigger : MonoBehaviour
         {
             endGameController.TriggerEndGame();
 
-            StartCoroutine(DelayedTeleportCoroutine());
+            StartCoroutine(DelayedRestartCoroutine());
         }
     }
 
-    IEnumerator DelayedTeleportCoroutine()
+    IEnumerator DelayedRestartCoroutine()
     {
-        yield return new WaitForSeconds(delayBeforeTeleport);
-
-        tpSceneScript.TriggerTeleport("MainMenu");
+        yield return new WaitForSeconds(delayBeforeRestart);
+        SceneManager.LoadScene("MainMenu"); 
     }
 }

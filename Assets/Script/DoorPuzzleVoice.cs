@@ -27,7 +27,7 @@ public class DoorPuzzleVoice : MonoBehaviour
         specialLight.SetActive(false);
     }
 
-        // 尝试找到主角上的 mouselook 脚本
+        // Trying to find the mouselook script on the main character
         GameObject mainCamera = GameObject.FindWithTag("MainCamera"); 
         if (mainCamera != null)
         {

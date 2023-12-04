@@ -103,12 +103,6 @@ public class mainplayer : MonoBehaviour
             
         }
 
-       
-        
-        
-
-
-
         moveDirection *= moveSpeed;
         controller.Move(moveDirection * Time.deltaTime);
         
