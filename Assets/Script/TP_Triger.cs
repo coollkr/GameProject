@@ -44,13 +44,24 @@ public class TeleportScript : MonoBehaviour
     {
         if (GameStateManager.Instance.AreAllPuzzlesSolved())
         {
-            player.transform.position = teleportTarget.position; 
+            Collider playerCollider = player.GetComponent<Collider>();
+            if (playerCollider != null)
+            {
+                playerCollider.enabled = false;
+            }
+            player.transform.position = teleportTarget.position;
+
+            if (playerCollider != null)
+            {
+                playerCollider.enabled = true;
+            }
         }
         else
         {
             enterRoomDialog.text = "Puzzle incomplete!";
         }
     }
+
 
     private void UpdateDialog(bool isActive)
     {
