@@ -6202,7 +6202,7 @@ MonoBehaviour:
 
 
     RFD
-    Stdio'
+    Studio'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24905,7 +24905,7 @@ MonoBehaviour:
     seem to have ended the curse
 
 
-    RFD Stdio'
+    RFD Studio'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27590,11 +27590,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.5918207
+      value: 4.722061
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.989998
+      value: 14.337
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29821,11 +29821,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5.5918207
+      value: 4.671877
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.239998
+      value: 9.56
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31238,11 +31238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.3528564
+      value: 3.0985758
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.23000336
+      value: -0.596
       objectReference: {fileID: 0}
     - target: {fileID: 7931644589486784637, guid: 38cea20bbf5b9d54b9b144c9853e9843, type: 3}
       propertyPath: m_LocalPosition.y
