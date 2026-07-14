@@ -4,7 +4,7 @@ Name: Running From Doom
 
 This is a group project for CSCI4168
 
-Can Chen  - Programming, Modelling, Testing
+Can Chen  - Leader, Programming, Modelling, Testing
 
 Kairui Liang – Programming, Modelling, Testing
 
